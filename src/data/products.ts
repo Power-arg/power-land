@@ -7,6 +7,7 @@ import proteinaEna100Vainilla from "@/assets/products/proteina-ena-100-vainilla.
 import proteinaEna100Chocolate from "@/assets/products/proteina-ena-100-choco.png";
 import proteinaBodyAdvanceDdl from "@/assets/products/proteina-body-advance-ddl.png";
 import proteinaBodyAdvanceVll from "@/assets/products/proteina-body-advance-vll.png";
+import ultraMassEnaChocolate from "@/assets/products/ultramass-ena-choco.png";
 
 import creatinaStar from "@/assets/products/creatina-star.png";
 import creatinaEna from "@/assets/products/creatina-ena.png";
@@ -27,6 +28,10 @@ import barritasCruddaPeanutCaramelCaja from "@/assets/products/crudda-peanutcara
 import barritasCruddaPeanutCaramel from "@/assets/products/crudda-peanutcaramel.png";
 import barritasCruddaCocoChocolateCaja from "@/assets/products/crudda-coco-caja.png";
 import barritasCruddaCocoChocolate from "@/assets/products/crudda-coco.png";
+import barritasCruddaBrownieCaja from "@/assets/products/crudda-brownie-caja.png";
+import barritasCruddaBrownie from "@/assets/products/crudda-brownie.png";
+import pancakesGrangerChocolate from "@/assets/products/pancakes-granger-choco.png";
+import pancakesGrangerVainilla from "@/assets/products/pancakes-granger-vainilla.png";
 
 import shakerEna from "@/assets/products/shaker-ena.png";
 import magnesioEna from "@/assets/products/magnesio-ena.png";
@@ -40,7 +45,7 @@ export interface Product {
   flavor?: string;
   price: number;
   image: string;
-  category: "proteina" | "creatina" | "barritas" | "otros";
+  category: "proteina" | "creatina" | "snacks y alimentos" | "otros";
 }
 
 export const products: Product[] = [
@@ -101,7 +106,7 @@ export const products: Product[] = [
     brand: "ENA",
     size: "910gr",
     flavor: "Chocolate",
-    price: 43199,
+    price: 44200,
     image: proteinaEna100Chocolate,
     category: "proteina",
   },
@@ -111,8 +116,18 @@ export const products: Product[] = [
     brand: "ENA",
     size: "910gr",
     flavor: "Vainilla",
-    price: 43199,
+    price: 44200,
     image: proteinaEna100Vainilla,
+    category: "proteina",
+  },
+  {
+    id: "ultramass-ena-chocolate",
+    name: "Ultra Mass Weight Gainer 3kg",
+    brand: "ENA",
+    size: "3kg",
+    flavor: "Chocolate",
+    price: 75000,
+    image: ultraMassEnaChocolate,
     category: "proteina",
   },
   {
@@ -141,7 +156,7 @@ export const products: Product[] = [
     name: "Creatina Monohidratada DoyPack",
     brand: "Star Nutrition",
     size: "300gr",
-    price: 27500,
+    price: 28000,
     image: creatinaStar,
     category: "creatina",
   },
@@ -150,7 +165,7 @@ export const products: Product[] = [
     name: "Creatina Monohidratada DoyPack",
     brand: "ENA",
     size: "300gr",
-    price: 28000,
+    price: 28500,
     image: creatinaEna,
     category: "creatina",
   },
@@ -200,7 +215,27 @@ export const products: Product[] = [
     image: colagenStarLimon,
     category: "otros"
   },
-  // Barritas
+  // Snacks y Alimentos
+  {
+    id: "pancakes-granger-vainilla",
+    name: "Pancakes Proteicos Granger",
+    brand: "Granger",
+    size: "400gr",
+    flavor: "Vainilla",
+    price: 16500,
+    image: pancakesGrangerVainilla,
+    category: "snacks y alimentos"
+  },
+  {
+    id: "pancakes-granger-chocolate",
+    name: "Pancakes Proteicos Granger",
+    brand: "Granger",
+    size: "400gr",
+    flavor: "Chocolate",
+    price: 16500,
+    image: pancakesGrangerChocolate,
+    category: "snacks y alimentos"
+  },
   {
     id: "barritas-crudda-avellana-chocolate-caja",
     name: "Crudda Barra Proteica Caja",
@@ -209,7 +244,7 @@ export const products: Product[] = [
     flavor: "Avellana y Chocolate",
     price: 20000,
     image: barritasCruddaAvellanaChcolateCaja,
-    category: "barritas"
+    category: "snacks y alimentos"
   },
   {
     id: "barritas-crudda-avellana-chocolate",
@@ -219,7 +254,27 @@ export const products: Product[] = [
     flavor: "Avellana y Chocolate",
     price: 2200,
     image: barritasCruddaAvellanaChcolate,
-    category: "barritas"
+    category: "snacks y alimentos"
+  },
+  {
+    id: "barritas-crudda-brownie-caja",
+    name: "Crudda Barra Proteica Caja",
+    brand: "Crudda",
+    size: "10 x 40gr",
+    flavor: "Brownie",
+    price: 20000,
+    image: barritasCruddaBrownieCaja,
+    category: "snacks y alimentos"
+  },
+  {
+    id: "barritas-crudda-brownie",
+    name: "Crudda Barra Proteica",
+    brand: "Crudda",
+    size: "40gr",
+    flavor: "Brownie",
+    price: 2200,
+    image: barritasCruddaBrownie,
+    category: "snacks y alimentos"
   },
   {
     id: "barritas-crudda-arandanos-nuez-caja",
@@ -229,7 +284,7 @@ export const products: Product[] = [
     flavor: "Arándanos y Nuez",
     price: 20000,
     image: barritasCruddaArandanosNuezCaja,
-    category: "barritas"
+    category: "snacks y alimentos"
   },
   {
     id: "barritas-crudda-arandanos-nuez",
@@ -239,7 +294,7 @@ export const products: Product[] = [
     flavor: "Arándanos y Nuez",
     price: 2200,
     image: barritasCruddaArandanosNuez,
-    category: "barritas"
+    category: "snacks y alimentos"
   },
   {
     id: "barritas-crudda-peanut-caramel-caja",
@@ -249,7 +304,7 @@ export const products: Product[] = [
     flavor: "Peanut Caramel",
     price: 20000,
     image: barritasCruddaPeanutCaramelCaja,
-    category: "barritas"
+    category: "snacks y alimentos"
   },
   {
     id: "barritas-crudda-peanut-caramel",
@@ -259,7 +314,7 @@ export const products: Product[] = [
     flavor: "Peanut Caramel",
     price: 2200,
     image: barritasCruddaPeanutCaramel,
-    category: "barritas"
+    category: "snacks y alimentos"
   },
   {
     id: "barritas-crudda-coco-chocolate-caja",
@@ -269,7 +324,7 @@ export const products: Product[] = [
     flavor: "Coco y Chocolate",
     price: 20000,
     image: barritasCruddaCocoChocolateCaja,
-    category: "barritas"
+    category: "snacks y alimentos"
   },
   {
     id: "barritas-crudda-coco-chocolate",
@@ -279,7 +334,7 @@ export const products: Product[] = [
     flavor: "Coco y Chocolate",
     price: 2200,
     image: barritasCruddaCocoChocolate,
-    category: "barritas"
+    category: "snacks y alimentos"
   },
   {
     id: "barritas-growsbar-chocolate-caja",
@@ -289,7 +344,7 @@ export const products: Product[] = [
     flavor: "Chocolate",
     price: 22000,
     image: barritasGrowsbarChocolateCaja,
-    category: "barritas",
+    category: "snacks y alimentos",
   },
   {
     id: "barritas-growsbar-chocolate",
@@ -299,7 +354,7 @@ export const products: Product[] = [
     flavor: "Chocolate",
     price: 2000,
     image: barritasGrowsbarChocolate,
-    category: "barritas"
+    category: "snacks y alimentos"
   },
   {
     id: "barritas-growsbar-frutilla-caja",
@@ -309,7 +364,7 @@ export const products: Product[] = [
     flavor: "Frutilla",
     price: 22000,
     image: barritasGrowsbarFrutillaCaja,
-    category: "barritas"
+    category: "snacks y alimentos"
   },
   {
     id: "barritas-growsbar-frutilla",
@@ -319,7 +374,7 @@ export const products: Product[] = [
     flavor: "Frutilla",
     price: 2000,
     image: barritasGrowsbarFrutilla,
-    category: "barritas"
+    category: "snacks y alimentos"
   },
   {
     id: "barritas-growsbar-coco-caja",
@@ -329,7 +384,7 @@ export const products: Product[] = [
     flavor: "Coco",
     price: 22000,
     image: barritasGrowsbarCocoCaja,
-    category: "barritas"
+    category: "snacks y alimentos"
   },
   {
     id: "barritas-growsbar-coco",
@@ -339,7 +394,7 @@ export const products: Product[] = [
     flavor: "Coco",
     price: 2000,
     image: barritasGrowsbarCoco,
-    category: "barritas"
+    category: "snacks y alimentos"
   }
 ];
 

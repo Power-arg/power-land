@@ -2,7 +2,7 @@ import { useState } from "react";
 import { products } from "@/data/products";
 import { ProductCard } from "./ProductCard";
 
-type Category = "todos" | "proteina" | "creatina" | "barritas" | "otros";
+type Category = "todos" | "proteina" | "creatina" | "snacks y alimentos" | "otros";
 
 export function ProductsSection() {
   const [activeCategory, setActiveCategory] = useState<Category>("todos");
@@ -16,7 +16,7 @@ export function ProductsSection() {
     { key: "todos", label: "Todos" },
     { key: "proteina", label: "Proteínas" },
     { key: "creatina", label: "Creatinas" },
-    { key: "barritas", label: "Barritas" },
+    { key: "snacks y alimentos", label: "Snacks y Alimentos" },
     { key: "otros", label: "Otros" },
   ];
 
