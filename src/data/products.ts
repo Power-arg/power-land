@@ -1,8 +1,11 @@
 import proteinaStarVainilla from "@/assets/products/proteina-star-vainilla.png";
 import proteinaStarFrutilla from "@/assets/products/proteina-star-frutilla.png";
+import proteinaStarChocolate from "@/assets/products/proteina-star-chocolate.png";
+import proteinaStarPoteVainilla from "@/assets/products/proteina-star-pote-vainilla.png";
 import proteinaEnaTruemadeChocolate from "@/assets/products/proteina-ena-truemade-chocolate.png";
 import proteinaEnaTruemadeVainilla from "@/assets/products/proteina-ena-truemade-vainilla.png";
 import porteinaEnaTruemadeChocolate2 from "@/assets/products/proteina-ena-truemade2lb-chocolate.png";
+import porteinaEnaTruemadeVainilla2 from "@/assets/products/proteina-ena-truemade2lb-vainilla.png";
 import proteinaEna100Vainilla from "@/assets/products/proteina-ena-100-vainilla.png";
 import proteinaEna100Chocolate from "@/assets/products/proteina-ena-100-choco.png";
 import proteinaBodyAdvanceDdl from "@/assets/products/proteina-body-advance-ddl.png";
@@ -71,6 +74,26 @@ export const products: Product[] = [
     category: "proteina",
   },
   {
+    id: "whey-star-chocolate",
+    name: "Whey Protein DoyPack 2Lb",
+    brand: "Star Nutrition",
+    size: "910gr",
+    flavor: "Chocolate",
+    price: 48000,
+    image: proteinaStarChocolate,
+    category: "proteina",
+  },
+  {
+    id: "whey-star-pote-vainilla",
+    name: "Whey Protein Platinum 2Lb",
+    brand: "Star Nutrition",
+    size: "910gr",
+    flavor: "Vainilla",
+    price: 50000,
+    image: proteinaStarPoteVainilla,
+    category: "proteina",
+  },
+  {
     id: "whey-ena-truemade-vainilla",
     name: "Whey Protein Truemade DoyPack 1Lb",
     brand: "ENA",
@@ -92,12 +115,22 @@ export const products: Product[] = [
   },
   {
     id: "whey-ena-truemade2lb-chocolate",
-    name: "Whey Protein Truemade DoyPack 2Lb",
+    name: "Whey Protein Truemade 2Lb",
     brand: "ENA",
     size: "910gr",
     flavor: "Chocolate",
-    price: 49000,
+    price: 53000,
     image: porteinaEnaTruemadeChocolate2,
+    category: "proteina",
+  },
+  {
+    id: "whey-ena-truemade2lb-vainilla",
+    name: "Whey Protein Truemade 2Lb",
+    brand: "ENA",
+    size: "910gr",
+    flavor: "Vainilla",
+    price: 53000,
+    image: porteinaEnaTruemadeVainilla2,
     category: "proteina",
   },
   {
