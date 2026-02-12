@@ -159,7 +159,7 @@ export const products: Product[] = [
     brand: "ENA",
     size: "3kg",
     flavor: "Chocolate",
-    price: 75000,
+    price: 80000,
     image: ultraMassEnaChocolate,
     category: "proteina",
   },
@@ -235,7 +235,7 @@ export const products: Product[] = [
     name: "Magnesio Citrato Capsulas",
     brand: "ENA",
     size: "60 Caps",
-    price: 14000,
+    price: 16000,
     image: magnesioEna,
     category: "otros"
   },
@@ -244,7 +244,7 @@ export const products: Product[] = [
     name: "Colágeno Hidrolizado",
     brand: "Star Nutrition",
     size: "210gr",
-    price: 21500,
+    price: 23000,
     image: colagenStarLimon,
     category: "otros"
   },
