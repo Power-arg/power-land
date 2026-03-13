@@ -16,6 +16,7 @@ import creatinaStar from "@/assets/products/creatina-star.png";
 import creatinaEna from "@/assets/products/creatina-ena.png";
 import creatinaBodyAdvance from "@/assets/products/creatina-body-advance.png";
 import creatinaGentech from "@/assets/products/creatina-gentech.png";
+import creatinaEnaFruitPunch from "@/assets/products/creatina-ena-fruitpunch.png";
 
 import barritasGrowsbarChocolateCaja from "@/assets/products/growsbar-choco-caja.png";
 import barritasGrowsbarChocolate from "@/assets/products/growsbar-choco.png";
@@ -36,6 +37,7 @@ import barritasCruddaBrownie from "@/assets/products/crudda-brownie.png";
 import pancakesGrangerChocolate from "@/assets/products/pancakes-granger-choco.png";
 import pancakesGrangerVainilla from "@/assets/products/pancakes-granger-vainilla.png";
 
+import preEntrenoEnaFruitPunch from "@/assets/products/preentreno-ena-fruitpunch.png";
 import shakerEna from "@/assets/products/shaker-ena.png";
 import magnesioEna from "@/assets/products/magnesio-ena.png";
 import colagenStarLimon from "@/assets/products/collagen-star-limon.png";
@@ -189,6 +191,7 @@ export const products: Product[] = [
     name: "Creatina Monohidratada DoyPack",
     brand: "Star Nutrition",
     size: "300gr",
+    flavor: "Sin sabor",
     price: 28500,
     image: creatinaStar,
     category: "creatina",
@@ -198,8 +201,19 @@ export const products: Product[] = [
     name: "Creatina Monohidratada DoyPack",
     brand: "ENA",
     size: "300gr",
+    flavor: "Sin sabor",
     price: 29000,
     image: creatinaEna,
+    category: "creatina",
+  },
+  {
+    id: "creatina-ena-fruitpunch",
+    name: "Creatina FruitPunch DoyPack",
+    brand: "ENA",
+    size: "300gr",
+    flavor: "Fruit Punch",
+    price: 29000,
+    image: creatinaEnaFruitPunch,
     category: "creatina",
   },
   /*{
@@ -216,11 +230,22 @@ export const products: Product[] = [
     name: "Creatina Monohidrato DoyPack",
     brand: "Gentech",
     size: "250gr",
+    flavor: "Sin sabor",
     price: 27500,
     image: creatinaGentech,
     category: "creatina",
   },
   // Otros
+  {
+    id: "preentreno-ena-fruitpunch",
+    name: "Pre-Entreno FruitPunch",
+    brand: "ENA",
+    size: "300gr",
+    flavor: "Fruit Punch",
+    price: 31000,
+    image: preEntrenoEnaFruitPunch,
+    category: "otros"
+  },
   {
     id: "shaker-ena",
     name: "Shaker",
@@ -244,6 +269,7 @@ export const products: Product[] = [
     name: "Colágeno Hidrolizado",
     brand: "Star Nutrition",
     size: "210gr",
+    flavor: "Limón",
     price: 23000,
     image: colagenStarLimon,
     category: "otros"
