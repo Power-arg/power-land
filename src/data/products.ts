@@ -1,6 +1,7 @@
 import proteinaStarVainilla from "@/assets/products/proteina-star-vainilla.png";
 import proteinaStarFrutilla from "@/assets/products/proteina-star-frutilla.png";
 import proteinaStarChocolate from "@/assets/products/proteina-star-chocolate.png";
+import proteinaStarCookies from "@/assets/products/proteina-star-cookies.png";
 import proteinaStarPoteVainilla from "@/assets/products/proteina-star-pote-vainilla.png";
 import proteinaEnaTruemadeChocolate from "@/assets/products/proteina-ena-truemade-chocolate.png";
 import proteinaEnaTruemadeVainilla from "@/assets/products/proteina-ena-truemade-vainilla.png";
@@ -34,6 +35,8 @@ import barritasCruddaCocoChocolateCaja from "@/assets/products/crudda-coco-caja.
 import barritasCruddaCocoChocolate from "@/assets/products/crudda-coco.png";
 import barritasCruddaBrownieCaja from "@/assets/products/crudda-brownie-caja.png";
 import barritasCruddaBrownie from "@/assets/products/crudda-brownie.png";
+import barritasCruddaBananaCaja from "@/assets/products/crudda-banana-caja.png";
+import barritasCruddaBanana from "@/assets/products/crudda-banana.png";
 import pancakesGrangerChocolate from "@/assets/products/pancakes-granger-choco.png";
 import pancakesGrangerVainilla from "@/assets/products/pancakes-granger-vainilla.png";
 
@@ -41,6 +44,7 @@ import preEntrenoEnaFruitPunch from "@/assets/products/preentreno-ena-fruitpunch
 import shakerEna from "@/assets/products/shaker-ena.png";
 import magnesioEna from "@/assets/products/magnesio-ena.png";
 import colagenStarLimon from "@/assets/products/collagen-star-limon.png";
+import colagenStarFrutosRojos from "@/assets/products/collagen-star-frutosrojos.png";
 
 export interface Product {
   id: string;
@@ -86,6 +90,16 @@ export const products: Product[] = [
     category: "proteina",
   },
   {
+    id: "whey-star-cookies",
+    name: "Whey Protein DoyPack 2Lb",
+    brand: "Star Nutrition",
+    size: "910gr",
+    flavor: "Cookies and Cream",
+    price: 50000,
+    image: proteinaStarCookies,
+    category: "proteina",
+  },
+  /*{
     id: "whey-star-pote-vainilla",
     name: "Whey Protein Platinum 2Lb",
     brand: "Star Nutrition",
@@ -94,7 +108,7 @@ export const products: Product[] = [
     price: 55000,
     image: proteinaStarPoteVainilla,
     category: "proteina",
-  },
+  },*/
   {
     id: "whey-ena-truemade-vainilla",
     name: "Whey Protein Truemade DoyPack 1Lb",
@@ -274,6 +288,16 @@ export const products: Product[] = [
     image: colagenStarLimon,
     category: "otros"
   },
+  {
+    id: "colageno-star-frutosrojos",
+    name: "Colágeno Hidrolizado",
+    brand: "Star Nutrition",
+    size: "210gr",
+    flavor: "Frutos Rojos",
+    price: 23000,
+    image: colagenStarFrutosRojos,
+    category: "otros"
+  },
   // Snacks y Alimentos
   {
     id: "pancakes-granger-vainilla",
@@ -376,6 +400,26 @@ export const products: Product[] = [
     category: "snacks y alimentos"
   },
   {
+    id: "barritas-crudda-banana-caja",
+    name: "Crudda Barra Proteica Caja",
+    brand: "Crudda",
+    size: "10 x 40gr",
+    flavor: "Banana Toffee",
+    price: 22000,
+    image: barritasCruddaBananaCaja,
+    category: "snacks y alimentos"
+  },
+  {
+    id: "barritas-crudda-banana",
+    name: "Crudda Barra Proteica",
+    brand: "Crudda",
+    size: "40gr",
+    flavor: "Banana Toffee",
+    price: 2400,
+    image: barritasCruddaBanana,
+    category: "snacks y alimentos"
+  },
+  {
     id: "barritas-crudda-coco-chocolate-caja",
     name: "Crudda Barra Proteica Caja",
     brand: "Crudda",
@@ -401,7 +445,7 @@ export const products: Product[] = [
     brand: "Growsbar",
     size: "12 x 46gr",
     flavor: "Chocolate",
-    price: 22000,
+    price: 23000,
     image: barritasGrowsbarChocolateCaja,
     category: "snacks y alimentos",
   },
@@ -411,7 +455,7 @@ export const products: Product[] = [
     brand: "Growsbar",
     size: "46gr",
     flavor: "Chocolate",
-    price: 2000,
+    price: 2200,
     image: barritasGrowsbarChocolate,
     category: "snacks y alimentos"
   },
@@ -421,7 +465,7 @@ export const products: Product[] = [
     brand: "Growsbar",
     size: "12 x 46gr",
     flavor: "Frutilla",
-    price: 22000,
+    price: 23000,
     image: barritasGrowsbarFrutillaCaja,
     category: "snacks y alimentos"
   },
@@ -431,7 +475,7 @@ export const products: Product[] = [
     brand: "Growsbar",
     size: "46gr",
     flavor: "Frutilla",
-    price: 2000,
+    price: 2200,
     image: barritasGrowsbarFrutilla,
     category: "snacks y alimentos"
   },
@@ -441,7 +485,7 @@ export const products: Product[] = [
     brand: "Growsbar",
     size: "12 x 46gr",
     flavor: "Coco",
-    price: 22000,
+    price: 23000,
     image: barritasGrowsbarCocoCaja,
     category: "snacks y alimentos"
   },
@@ -451,7 +495,7 @@ export const products: Product[] = [
     brand: "Growsbar",
     size: "46gr",
     flavor: "Coco",
-    price: 2000,
+    price: 2200,
     image: barritasGrowsbarCoco,
     category: "snacks y alimentos"
   }
