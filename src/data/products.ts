@@ -45,6 +45,10 @@ import shakerEna from "@/assets/products/shaker-ena.png";
 import magnesioEna from "@/assets/products/magnesio-ena.png";
 import colagenStarLimon from "@/assets/products/collagen-star-limon.png";
 import colagenStarFrutosRojos from "@/assets/products/collagen-star-frutosrojos.png";
+import gelNaranja from "@/assets/products/gel-naranja.png";
+import gelesNaranja from "@/assets/products/geles-naranja.png";
+import gelTriberry from "@/assets/products/gel-triberry.png";
+import gelesTriberry from "@/assets/products/geles-triberry.png";
 
 export interface Product {
   id: string;
@@ -251,25 +255,6 @@ export const products: Product[] = [
   },
   // Otros
   {
-    id: "preentreno-ena-fruitpunch",
-    name: "Pre-Entreno FruitPunch",
-    brand: "ENA",
-    size: "300gr",
-    flavor: "Fruit Punch",
-    price: 31000,
-    image: preEntrenoEnaFruitPunch,
-    category: "otros"
-  },
-  {
-    id: "shaker-ena",
-    name: "Shaker",
-    brand: "ENA",
-    size: "500ml",
-    price: 8000,
-    image: shakerEna,
-    category: "otros"
-  },
-  {
     id: "magnesio-ena",
     name: "Magnesio Citrato Capsulas",
     brand: "ENA",
@@ -296,6 +281,65 @@ export const products: Product[] = [
     flavor: "Frutos Rojos",
     price: 23000,
     image: colagenStarFrutosRojos,
+    category: "otros"
+  },
+  {
+    id: "gel-naranja",
+    name: "Gel Energético Naranja",
+    brand: "Nutremax",
+    size: "42gr",
+    flavor: "Naranja con cafeína",
+    price: 2400,
+    image: gelNaranja,
+    category: "otros"
+  },
+  {
+    id: "geles-naranja",
+    name: "Geles Energéticos Naranja",
+    brand: "Nutremax",
+    size: "12 x 42gr",
+    flavor: "Naranja con cafeína",
+    price: 25000,
+    image: gelesNaranja,
+    category: "otros"
+  },
+  {
+    id: "gel-triberry",
+    name: "Gel Energético Triberry",
+    brand: "Nutremax",
+    size: "42gr",
+    flavor: "Triberry con cafeína",
+    price: 2400,
+    image: gelTriberry,
+    category: "otros"
+  },
+  {
+    id: "geles-triberry",
+    name: "Geles Energéticos Triberry",
+    brand: "Nutremax",
+    size: "12 x 42gr",
+    flavor: "Triberry con cafeína",
+    price: 25000,
+    image: gelesTriberry,
+    category: "otros"
+  },
+  {
+    id: "shaker-ena",
+    name: "Shaker",
+    brand: "ENA",
+    size: "500ml",
+    price: 8000,
+    image: shakerEna,
+    category: "otros"
+  },
+  {
+    id: "preentreno-ena-fruitpunch",
+    name: "Pre-Entreno FruitPunch",
+    brand: "ENA",
+    size: "300gr",
+    flavor: "Fruit Punch",
+    price: 31000,
+    image: preEntrenoEnaFruitPunch,
     category: "otros"
   },
   // Snacks y Alimentos
