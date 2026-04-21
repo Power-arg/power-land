@@ -49,6 +49,8 @@ import gelNaranja from "@/assets/products/gel-naranja.png";
 import gelesNaranja from "@/assets/products/geles-naranja.png";
 import gelTriberry from "@/assets/products/gel-triberry.png";
 import gelesTriberry from "@/assets/products/geles-triberry.png";
+import gelNeutro from "@/assets/products/gel-neutro.png";
+import gelesNeutro from "@/assets/products/geles-neutro.png";
 
 export interface Product {
   id: string;
@@ -321,6 +323,26 @@ export const products: Product[] = [
     flavor: "Triberry con cafeína",
     price: 25000,
     image: gelesTriberry,
+    category: "otros"
+  },
+  {
+    id: "gel-neutro",
+    name: "Gel Energético Sin Sabor",
+    brand: "Nutremax",
+    size: "42gr",
+    flavor: "Sin sabor sin cafeína",
+    price: 2400,
+    image: gelNeutro,
+    category: "otros"
+  },
+  {
+    id: "geles-neutro",
+    name: "Geles Energéticos Sin Sabor",
+    brand: "Nutremax",
+    size: "12 x 42gr",
+    flavor: "Sin sabor sin cafeína",
+    price: 25000,
+    image: gelesNeutro,
     category: "otros"
   },
   {
