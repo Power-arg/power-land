@@ -37,20 +37,32 @@ import barritasCruddaBrownieCaja from "@/assets/products/crudda-brownie-caja.png
 import barritasCruddaBrownie from "@/assets/products/crudda-brownie.png";
 import barritasCruddaBananaCaja from "@/assets/products/crudda-banana-caja.png";
 import barritasCruddaBanana from "@/assets/products/crudda-banana.png";
+import barritasIntegraArandanosCaja from "@/assets/products/integra-caja-arandanos.png";
+import barritasIntegraArandanos from "@/assets/products/integra-arandanos.png";
+import barritasIntegraManiCaja from "@/assets/products/integra-caja-mani.png";
+import barritasIntegraMani from "@/assets/products/integra-mani.png";
+
 import pancakesGrangerChocolate from "@/assets/products/pancakes-granger-choco.png";
 import pancakesGrangerVainilla from "@/assets/products/pancakes-granger-vainilla.png";
 
 import preEntrenoEnaFruitPunch from "@/assets/products/preentreno-ena-fruitpunch.png";
 import shakerEna from "@/assets/products/shaker-ena.png";
 import magnesioEna from "@/assets/products/magnesio-ena.png";
+
 import colagenStarLimon from "@/assets/products/collagen-star-limon.png";
 import colagenStarFrutosRojos from "@/assets/products/collagen-star-frutosrojos.png";
+
 import gelNaranja from "@/assets/products/gel-naranja.png";
 import gelesNaranja from "@/assets/products/geles-naranja.png";
 import gelTriberry from "@/assets/products/gel-triberry.png";
 import gelesTriberry from "@/assets/products/geles-triberry.png";
 import gelNeutro from "@/assets/products/gel-neutro.png";
 import gelesNeutro from "@/assets/products/geles-neutro.png";
+import gelesChocoEndurance from "@/assets/products/geles-choco-endurance.png";
+import gelChocoEndurance from "@/assets/products/gel-choco-endurance.png";
+
+import granolaPastamani from "@/assets/products/granola-pastamani.png";
+import granolaBanana from "@/assets/products/granola-banana.png";
 
 export interface Product {
   id: string;
@@ -60,11 +72,11 @@ export interface Product {
   flavor?: string;
   price: number;
   image: string;
-  category: "proteina" | "creatina" | "snacks y alimentos" | "otros";
+  category: "proteina" | "creatina" | "barritas" | "granolas" | "pancakes" | "geles" | "colagenos" | "otros";
 }
 
 export const products: Product[] = [
-  // Proteinas
+  // PROTEINAS
   {
     id: "whey-star-frutilla",
     name: "Whey Protein DoyPack 2Lb",
@@ -205,7 +217,7 @@ export const products: Product[] = [
     image: proteinaBodyAdvanceVll,
     category: "proteina",
   },
-  // Creatinas
+  // CREATINAS
   {
     id: "creatina-star",
     name: "Creatina Monohidratada DoyPack",
@@ -255,7 +267,7 @@ export const products: Product[] = [
     image: creatinaGentech,
     category: "creatina",
   },
-  // Otros
+  // OTROS
   {
     id: "magnesio-ena",
     name: "Magnesio Citrato Capsulas",
@@ -263,95 +275,6 @@ export const products: Product[] = [
     size: "60 Caps",
     price: 16000,
     image: magnesioEna,
-    category: "otros"
-  },
-  {
-    id: "colageno-star-limon",
-    name: "Colágeno Hidrolizado",
-    brand: "Star Nutrition",
-    size: "210gr",
-    flavor: "Limón",
-    price: 23000,
-    image: colagenStarLimon,
-    category: "otros"
-  },
-  {
-    id: "colageno-star-frutosrojos",
-    name: "Colágeno Hidrolizado",
-    brand: "Star Nutrition",
-    size: "210gr",
-    flavor: "Frutos Rojos",
-    price: 23000,
-    image: colagenStarFrutosRojos,
-    category: "otros"
-  },
-  {
-    id: "gel-naranja",
-    name: "Gel Energético Naranja",
-    brand: "Nutremax",
-    size: "42gr",
-    flavor: "Naranja con cafeína",
-    price: 2400,
-    image: gelNaranja,
-    category: "otros"
-  },
-  {
-    id: "geles-naranja",
-    name: "Geles Energéticos Naranja",
-    brand: "Nutremax",
-    size: "12 x 42gr",
-    flavor: "Naranja con cafeína",
-    price: 25000,
-    image: gelesNaranja,
-    category: "otros"
-  },
-  {
-    id: "gel-triberry",
-    name: "Gel Energético Triberry",
-    brand: "Nutremax",
-    size: "42gr",
-    flavor: "Triberry con cafeína",
-    price: 2400,
-    image: gelTriberry,
-    category: "otros"
-  },
-  {
-    id: "geles-triberry",
-    name: "Geles Energéticos Triberry",
-    brand: "Nutremax",
-    size: "12 x 42gr",
-    flavor: "Triberry con cafeína",
-    price: 25000,
-    image: gelesTriberry,
-    category: "otros"
-  },
-  {
-    id: "gel-neutro",
-    name: "Gel Energético Sin Sabor",
-    brand: "Nutremax",
-    size: "42gr",
-    flavor: "Sin sabor sin cafeína",
-    price: 2400,
-    image: gelNeutro,
-    category: "otros"
-  },
-  {
-    id: "geles-neutro",
-    name: "Geles Energéticos Sin Sabor",
-    brand: "Nutremax",
-    size: "12 x 42gr",
-    flavor: "Sin sabor sin cafeína",
-    price: 25000,
-    image: gelesNeutro,
-    category: "otros"
-  },
-  {
-    id: "shaker-ena",
-    name: "Shaker",
-    brand: "ENA",
-    size: "500ml",
-    price: 8000,
-    image: shakerEna,
     category: "otros"
   },
   {
@@ -364,7 +287,118 @@ export const products: Product[] = [
     image: preEntrenoEnaFruitPunch,
     category: "otros"
   },
-  // Snacks y Alimentos
+  {
+    id: "shaker-ena",
+    name: "Shaker",
+    brand: "ENA",
+    size: "500ml",
+    price: 8000,
+    image: shakerEna,
+    category: "otros"
+  },
+  // COLÁGENOS
+  {
+    id: "colageno-star-limon",
+    name: "Colágeno Hidrolizado",
+    brand: "Star Nutrition",
+    size: "210gr",
+    flavor: "Limón",
+    price: 23000,
+    image: colagenStarLimon,
+    category: "colagenos"
+  },
+  {
+    id: "colageno-star-frutosrojos",
+    name: "Colágeno Hidrolizado",
+    brand: "Star Nutrition",
+    size: "210gr",
+    flavor: "Frutos Rojos",
+    price: 23000,
+    image: colagenStarFrutosRojos,
+    category: "colagenos"
+  },
+  // GELES
+  {
+    id: "gel-naranja",
+    name: "Gel Energético Energy",
+    brand: "Nutremax",
+    size: "42gr",
+    flavor: "Naranja con cafeína",
+    price: 2400,
+    image: gelNaranja,
+    category: "geles"
+  },
+  {
+    id: "geles-naranja",
+    name: "Geles Energéticos Energy",
+    brand: "Nutremax",
+    size: "12 x 42gr",
+    flavor: "Naranja con cafeína",
+    price: 25000,
+    image: gelesNaranja,
+    category: "geles"
+  },
+  {
+    id: "gel-triberry",
+    name: "Gel Energético Energy",
+    brand: "Nutremax",
+    size: "42gr",
+    flavor: "Triberry con cafeína",
+    price: 2400,
+    image: gelTriberry,
+    category: "geles"
+  },
+  {
+    id: "geles-triberry",
+    name: "Geles Energéticos Energy",
+    brand: "Nutremax",
+    size: "12 x 42gr",
+    flavor: "Triberry con cafeína",
+    price: 25000,
+    image: gelesTriberry,
+    category: "geles"
+  },
+  {
+    id: "gel-neutro",
+    name: "Gel Energético Energy",
+    brand: "Nutremax",
+    size: "42gr",
+    flavor: "Sin sabor sin cafeína",
+    price: 2400,
+    image: gelNeutro,
+    category: "geles"
+  },
+  {
+    id: "geles-neutro",
+    name: "Geles Energéticos Energy",
+    brand: "Nutremax",
+    size: "12 x 42gr",
+    flavor: "Sin sabor sin cafeína",
+    price: 25000,
+    image: gelesNeutro,
+    category: "geles"
+  },
+  {
+    id: "gel-chocoendurance",
+    name: "Gel Energético Endurance",
+    brand: "Nutremax",
+    size: "42gr",
+    flavor: "Chocolate con cafeína",
+    price: 2500,
+    image: gelChocoEndurance,
+    category: "geles"
+  },
+  {
+    id: "geles-chocoendurance",
+    name: "Geles Energéticos Endurance",
+    brand: "Nutremax",
+    size: "12 x 42gr",
+    flavor: "Chocolate con cafeína",
+    price: 28000,
+    image: gelesChocoEndurance,
+    category: "geles"
+  },
+  // PANCAKES
   {
     id: "pancakes-granger-vainilla",
     name: "Pancakes Proteicos Granger",
@@ -373,7 +407,7 @@ export const products: Product[] = [
     flavor: "Vainilla",
     price: 16500,
     image: pancakesGrangerVainilla,
-    category: "snacks y alimentos"
+    category: "pancakes"
   },
   {
     id: "pancakes-granger-chocolate",
@@ -383,7 +417,69 @@ export const products: Product[] = [
     flavor: "Chocolate",
     price: 16500,
     image: pancakesGrangerChocolate,
-    category: "snacks y alimentos"
+    category: "pancakes"
+  },
+  // GRANOLAS
+  {
+    id: "granola-pastamani",
+    name: "Granola Proteica",
+    brand: "Integra",
+    size: "250gr",
+    flavor: "Pasta de Mani",
+    price: 9000,
+    image: granolaPastamani,
+    category: "granolas"
+  },
+  {
+    id: "granola-banana",
+    name: "Granola Proteica",
+    brand: "Integra",
+    size: "250gr",
+    flavor: "Banana y Chocolate",
+    price: 9000,
+    image: granolaBanana,
+    category: "granolas"
+  },
+  // BARRITAS
+  {
+    id: "barritas-integra-mani-caja",
+    name: "Integra Barra Proteica Caja",
+    brand: "Integra",
+    size: "10 x 45gr",
+    flavor: "Maní y Chocolate",
+    price: 22000,
+    image: barritasIntegraManiCaja,
+    category: "barritas"
+  },
+  {
+    id: "barritas-integra-mani-chocolate",
+    name: "Integra Barra Proteica",
+    brand: "Integra",
+    size: "45gr",
+    flavor: "Maní y Chocolate",
+    price: 2400,
+    image: barritasIntegraMani,
+    category: "barritas"
+  },
+  {
+    id: "barritas-integra-arandanos-caja",
+    name: "Integra Barra Proteica Caja",
+    brand: "Integra",
+    size: "10 x 45gr",
+    flavor: "Maní y Arándanos",
+    price: 22000,
+    image: barritasIntegraArandanosCaja,
+    category: "barritas"
+  },
+  {
+    id: "barritas-integra-avellana-chocolate",
+    name: "Integra Barra Proteica",
+    brand: "Integra",
+    size: "45gr",
+    flavor: "Pasta de Maní y Arándanos",
+    price: 2400,
+    image: barritasIntegraArandanos,
+    category: "barritas"
   },
   {
     id: "barritas-crudda-avellana-chocolate-caja",
@@ -393,7 +489,7 @@ export const products: Product[] = [
     flavor: "Avellana y Chocolate",
     price: 22000,
     image: barritasCruddaAvellanaChcolateCaja,
-    category: "snacks y alimentos"
+    category: "barritas"
   },
   {
     id: "barritas-crudda-avellana-chocolate",
@@ -403,7 +499,7 @@ export const products: Product[] = [
     flavor: "Avellana y Chocolate",
     price: 2400,
     image: barritasCruddaAvellanaChcolate,
-    category: "snacks y alimentos"
+    category: "barritas"
   },
   {
     id: "barritas-crudda-brownie-caja",
@@ -413,7 +509,7 @@ export const products: Product[] = [
     flavor: "Brownie",
     price: 22000,
     image: barritasCruddaBrownieCaja,
-    category: "snacks y alimentos"
+    category: "barritas"
   },
   {
     id: "barritas-crudda-brownie",
@@ -423,7 +519,7 @@ export const products: Product[] = [
     flavor: "Brownie",
     price: 2400,
     image: barritasCruddaBrownie,
-    category: "snacks y alimentos"
+    category: "barritas"
   },
   {
     id: "barritas-crudda-arandanos-nuez-caja",
@@ -433,7 +529,7 @@ export const products: Product[] = [
     flavor: "Arándanos y Nuez",
     price: 22000,
     image: barritasCruddaArandanosNuezCaja,
-    category: "snacks y alimentos"
+    category: "barritas"
   },
   {
     id: "barritas-crudda-arandanos-nuez",
@@ -443,7 +539,7 @@ export const products: Product[] = [
     flavor: "Arándanos y Nuez",
     price: 2400,
     image: barritasCruddaArandanosNuez,
-    category: "snacks y alimentos"
+    category: "barritas"
   },
   {
     id: "barritas-crudda-peanut-caramel-caja",
@@ -453,7 +549,7 @@ export const products: Product[] = [
     flavor: "Peanut Caramel",
     price: 22000,
     image: barritasCruddaPeanutCaramelCaja,
-    category: "snacks y alimentos"
+    category: "barritas"
   },
   {
     id: "barritas-crudda-peanut-caramel",
@@ -463,7 +559,7 @@ export const products: Product[] = [
     flavor: "Peanut Caramel",
     price: 2400,
     image: barritasCruddaPeanutCaramel,
-    category: "snacks y alimentos"
+    category: "barritas"
   },
   {
     id: "barritas-crudda-banana-caja",
@@ -473,7 +569,7 @@ export const products: Product[] = [
     flavor: "Banana Toffee",
     price: 22000,
     image: barritasCruddaBananaCaja,
-    category: "snacks y alimentos"
+    category: "barritas"
   },
   {
     id: "barritas-crudda-banana",
@@ -483,7 +579,7 @@ export const products: Product[] = [
     flavor: "Banana Toffee",
     price: 2400,
     image: barritasCruddaBanana,
-    category: "snacks y alimentos"
+    category: "barritas"
   },
   {
     id: "barritas-crudda-coco-chocolate-caja",
@@ -493,7 +589,7 @@ export const products: Product[] = [
     flavor: "Coco y Chocolate",
     price: 22000,
     image: barritasCruddaCocoChocolateCaja,
-    category: "snacks y alimentos"
+    category: "barritas"
   },
   {
     id: "barritas-crudda-coco-chocolate",
@@ -503,7 +599,7 @@ export const products: Product[] = [
     flavor: "Coco y Chocolate",
     price: 2400,
     image: barritasCruddaCocoChocolate,
-    category: "snacks y alimentos"
+    category: "barritas"
   },
   {
     id: "barritas-growsbar-chocolate-caja",
@@ -511,9 +607,9 @@ export const products: Product[] = [
     brand: "Growsbar",
     size: "12 x 46gr",
     flavor: "Chocolate",
-    price: 23000,
+    price: 24000,
     image: barritasGrowsbarChocolateCaja,
-    category: "snacks y alimentos",
+    category: "barritas",
   },
   {
     id: "barritas-growsbar-chocolate",
@@ -521,9 +617,9 @@ export const products: Product[] = [
     brand: "Growsbar",
     size: "46gr",
     flavor: "Chocolate",
-    price: 2200,
+    price: 2300,
     image: barritasGrowsbarChocolate,
-    category: "snacks y alimentos"
+    category: "barritas"
   },
   {
     id: "barritas-growsbar-frutilla-caja",
@@ -531,9 +627,9 @@ export const products: Product[] = [
     brand: "Growsbar",
     size: "12 x 46gr",
     flavor: "Frutilla",
-    price: 23000,
+    price: 24000,
     image: barritasGrowsbarFrutillaCaja,
-    category: "snacks y alimentos"
+    category: "barritas"
   },
   {
     id: "barritas-growsbar-frutilla",
@@ -541,9 +637,9 @@ export const products: Product[] = [
     brand: "Growsbar",
     size: "46gr",
     flavor: "Frutilla",
-    price: 2200,
+    price: 2300,
     image: barritasGrowsbarFrutilla,
-    category: "snacks y alimentos"
+    category: "barritas"
   },
   {
     id: "barritas-growsbar-coco-caja",
@@ -551,9 +647,9 @@ export const products: Product[] = [
     brand: "Growsbar",
     size: "12 x 46gr",
     flavor: "Coco",
-    price: 23000,
+    price: 24000,
     image: barritasGrowsbarCocoCaja,
-    category: "snacks y alimentos"
+    category: "barritas"
   },
   {
     id: "barritas-growsbar-coco",
@@ -561,9 +657,9 @@ export const products: Product[] = [
     brand: "Growsbar",
     size: "46gr",
     flavor: "Coco",
-    price: 2200,
+    price: 2300,
     image: barritasGrowsbarCoco,
-    category: "snacks y alimentos"
+    category: "barritas"
   }
 ];
 

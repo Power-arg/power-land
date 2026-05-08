@@ -2,7 +2,7 @@ import { useState } from "react";
 import { products } from "@/data/products";
 import { ProductCard } from "./ProductCard";
 
-type Category = "todos" | "proteina" | "creatina" | "snacks y alimentos" | "otros";
+type Category = "todos" | "proteina" | "creatina" | "barritas" | "granolas" | "pancakes" | "geles" | "colagenos" | "otros";
 
 export function ProductsSection() {
   const [activeCategory, setActiveCategory] = useState<Category>("todos");
@@ -16,8 +16,12 @@ export function ProductsSection() {
     { key: "todos", label: "Todos" },
     { key: "proteina", label: "Proteínas" },
     { key: "creatina", label: "Creatinas" },
-    { key: "snacks y alimentos", label: "Snacks y Alimentos" },
-    { key: "otros", label: "Otros" },
+    { key: "barritas", label: "Barritas" },
+    { key: "granolas", label: "Granolas" },
+    { key: "pancakes", label: "Pancakes" },
+    { key: "geles", label: "Geles" },
+    { key: "colagenos", label: "Colágenos" },
+    { key: "otros", label: "Otros" }
   ];
 
   return (
@@ -40,7 +44,7 @@ export function ProductsSection() {
             <button
               key={cat.key}
               onClick={() => setActiveCategory(cat.key)}
-              className={`px-6 py-2.5 font-display text-lg tracking-wide transition-all duration-200 rounded-lg ${
+              className={`px-3 py-2 text-sm font-display tracking-wide transition-all duration-200 rounded-lg sm:px-6 sm:py-2.5 sm:text-lg ${
                 activeCategory === cat.key
                   ? "bg-primary text-primary-foreground"
                   : "bg-card text-foreground hover:bg-primary/10 border border-border"
