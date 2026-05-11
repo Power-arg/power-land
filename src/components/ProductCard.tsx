@@ -33,9 +33,17 @@ export function ProductCard({ product }: ProductCardProps) {
       {hasDiscount && (
         <div className="absolute top-3 left-3 z-10 flex items-center gap-1 bg-red-500 text-white px-3 py-1.5 rounded-full font-bold text-sm">
           <Flame className="h-4 w-4" />
-          {product.discount}% OFF
+          SALE
         </div>
       )}
+
+      {/* Hot Sale Badge 
+      {hasDiscount && (
+        <div className="absolute top-3 left-3 z-10 flex items-center gap-1 bg-red-500 text-white px-3 py-1.5 rounded-full font-bold text-sm">
+          <Flame className="h-4 w-4" />
+          {product.discount}% OFF
+        </div>
+      )}*/}
 
       {/* Selection Badge */}
       {inCart && (
