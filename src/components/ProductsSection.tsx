@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { products } from "@/data/products";
 import { ProductCard } from "./ProductCard";
+import { Flame } from "lucide-react";
 
 type Category = "todos" | "proteina" | "creatina" | "barritas" | "granolas" | "pancakes" | "geles" | "colagenos" | "otros";
 
@@ -26,16 +27,26 @@ export function ProductsSection() {
 
   return (
     <section id="productos" className="py-20 lg:py-32 bg-secondary/30">
+      {/* Hot Sale Banner */}
+      <div className="mb-12 bg-gradient-to-r from-red-500 to-red-600 text-white py-6 px-4 rounded-lg max-w-4xl mx-auto text-center">
+        <div className="flex items-center justify-center gap-2 mb-2">
+          <Flame className="h-6 w-6" />
+          <h3 className="text-2xl sm:text-3xl font-display tracking-wider">HOT SALE EN MARCHA</h3>
+          <Flame className="h-6 w-6" />
+        </div>
+        <p className="text-red-100 text-sm sm:text-base">Descuentos en productos seleccionados</p>
+      </div>
+
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display text-foreground mb-4">
-            NUESTROS PRODUCTOS
+            🔥 OFERTAS IMPRESIONANTES 🔥
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
-            Seleccioná los productos que quieras y hacé tu pedido por WhatsApp
+            Aprovechá nuestro HOT SALE con descuentos especiales. Seleccioná los productos que quieras y hacé tu pedido por WhatsApp
           </p>
-          <div className="w-20 h-1 bg-foreground mx-auto" />
+          <div className="w-20 h-1 bg-red-500 mx-auto" />
         </div>
 
         {/* Category Filter */}
