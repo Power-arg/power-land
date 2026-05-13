@@ -1,4 +1,4 @@
-import { Plus, Minus, Check } from "lucide-react";
+import { Plus, Minus, Check, Flame } from "lucide-react";
 import { Product, formatPrice } from "@/data/products";
 import { useCart } from "@/context/CartContext";
 
@@ -11,6 +11,7 @@ export function ProductCard({ product }: ProductCardProps) {
   const inCart = isInCart(product.id);
   const cartItem = items.find((item) => item.product.id === product.id);
   const quantity = cartItem?.quantity || 0;
+  const hasDiscount = product.discount && product.originalPrice;
 
   const handleToggle = () => {
     if (inCart) {
@@ -28,6 +29,22 @@ export function ProductCard({ product }: ProductCardProps) {
           : "border-border hover:border-foreground/30 hover:shadow-md"
       }`}
     >
+      {/* Hot Sale Badge */}
+      {hasDiscount && (
+        <div className="absolute top-3 left-3 z-10 flex items-center gap-1 bg-red-500 text-white px-3 py-1.5 rounded-full font-bold text-sm">
+          <Flame className="h-4 w-4" />
+          SALE
+        </div>
+      )}
+
+      {/* Hot Sale Badge 
+      {hasDiscount && (
+        <div className="absolute top-3 left-3 z-10 flex items-center gap-1 bg-red-500 text-white px-3 py-1.5 rounded-full font-bold text-sm">
+          <Flame className="h-4 w-4" />
+          {product.discount}% OFF
+        </div>
+      )}*/}
+
       {/* Selection Badge */}
       {inCart && (
         <div className="absolute top-3 right-3 z-10 bg-foreground text-background p-1.5 rounded-full">
@@ -73,9 +90,16 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
 
         <div className="flex items-center justify-between">
-          <span className="font-display text-2xl text-foreground">
-            {formatPrice(product.price)}
-          </span>
+          <div className="flex flex-col gap-1">
+            {hasDiscount && (
+              <span className="text-sm text-muted-foreground line-through">
+                {formatPrice(product.originalPrice)}
+              </span>
+            )}
+            <span className={`font-display text-2xl ${hasDiscount ? 'text-red-500' : 'text-foreground'}`}>
+              {formatPrice(product.price)}
+            </span>
+          </div>
 
           {inCart ? (
             <div className="flex items-center gap-2">
@@ -96,7 +120,11 @@ export function ProductCard({ product }: ProductCardProps) {
           ) : (
             <button
               onClick={handleToggle}
-              className="p-3 bg-secondary hover:bg-primary hover:text-primary-foreground rounded-lg transition-all duration-200"
+              className={`p-3 rounded-lg transition-all duration-200 ${
+                hasDiscount
+                  ? 'bg-red-500 text-white hover:bg-red-600'
+                  : 'bg-secondary hover:bg-primary hover:text-primary-foreground'
+              }`}
             >
               <Plus className="h-5 w-5" />
             </button>

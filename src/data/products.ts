@@ -48,9 +48,11 @@ import pancakesGrangerVainilla from "@/assets/products/pancakes-granger-vainilla
 import preEntrenoEnaFruitPunch from "@/assets/products/preentreno-ena-fruitpunch.png";
 import shakerEna from "@/assets/products/shaker-ena.png";
 import magnesioEna from "@/assets/products/magnesio-ena.png";
+import omega3Star from "@/assets/products/omega3-star.png";
 
 import colagenStarLimon from "@/assets/products/collagen-star-limon.png";
 import colagenStarFrutosRojos from "@/assets/products/collagen-star-frutosrojos.png";
+import colagenoOneFitNaranja from "@/assets/products/colageno-onefit-naranja.png";
 
 import gelNaranja from "@/assets/products/gel-naranja.png";
 import gelesNaranja from "@/assets/products/geles-naranja.png";
@@ -71,6 +73,8 @@ export interface Product {
   size: string;
   flavor?: string;
   price: number;
+  originalPrice?: number;
+  discount?: number;
   image: string;
   category: "proteina" | "creatina" | "barritas" | "granolas" | "pancakes" | "geles" | "colagenos" | "otros";
 }
@@ -278,6 +282,15 @@ export const products: Product[] = [
     category: "otros"
   },
   {
+    id: "omega3-Star",
+    name: "Omega 3 fish oil capsulas",
+    brand: "Star Nutrition",
+    size: "60 Caps",
+    price: 32000,
+    image: omega3Star,
+    category: "otros"
+  },
+  {
     id: "preentreno-ena-fruitpunch",
     name: "Pre-Entreno FruitPunch",
     brand: "ENA",
@@ -315,6 +328,16 @@ export const products: Product[] = [
     flavor: "Frutos Rojos",
     price: 23000,
     image: colagenStarFrutosRojos,
+    category: "colagenos"
+  },
+  {
+    id: "colageno-onefit-naranja",
+    name: "Colágeno Hidrolizado",
+    brand: "One Fit Nutrition",
+    size: "240gr",
+    flavor: "Naranja",
+    price: 20000,
+    image: colagenoOneFitNaranja,
     category: "colagenos"
   },
   // GELES
