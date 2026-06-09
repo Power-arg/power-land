@@ -12,6 +12,8 @@ import proteinaEna100Chocolate from "@/assets/products/proteina-ena-100-choco.pn
 import proteinaBodyAdvanceDdl from "@/assets/products/proteina-body-advance-ddl.png";
 import proteinaBodyAdvanceVll from "@/assets/products/proteina-body-advance-vll.png";
 import ultraMassEnaChocolate from "@/assets/products/ultramass-ena-choco.png";
+import ultraMassEnaChocolate15 from "@/assets/products/ultramass-ena-choco15.png";
+import ultraMassEnaVainilla from "@/assets/products/ultramass-ena-vainilla15.png";
 
 import creatinaStar from "@/assets/products/creatina-star.png";
 import creatinaEna from "@/assets/products/creatina-ena.png";
@@ -45,10 +47,16 @@ import barritasIntegraMani from "@/assets/products/integra-mani.png";
 import pancakesGrangerChocolate from "@/assets/products/pancakes-granger-choco.png";
 import pancakesGrangerVainilla from "@/assets/products/pancakes-granger-vainilla.png";
 
-import preEntrenoEnaFruitPunch from "@/assets/products/preentreno-ena-fruitpunch.png";
 import shakerEna from "@/assets/products/shaker-ena.png";
 import magnesioEna from "@/assets/products/magnesio-ena.png";
 import omega3Star from "@/assets/products/omega3-star.png";
+
+import preEntrenoEnaFruitPunch from "@/assets/products/preentreno-ena-fruitpunch.png";
+import preEntrenoEnaLimon from "@/assets/products/preentreno-ena-limon.png";
+import preEntrenoStarSandia from "@/assets/products/preentreno-star-sandia.png";
+import preEntrenoStarLimon from "@/assets/products/preentreno-star-limon.png";
+import preEntrenoStarAcai from "@/assets/products/preentreno-star-acai.png";
+import preEntrenoStarUva from "@/assets/products/preentreno-star-uva.png";
 
 import colagenStarLimon from "@/assets/products/collagen-star-limon.png";
 import colagenStarFrutosRojos from "@/assets/products/collagen-star-frutosrojos.png";
@@ -76,7 +84,7 @@ export interface Product {
   originalPrice?: number;
   discount?: number;
   image: string;
-  category: "proteina" | "creatina" | "barritas" | "granolas" | "pancakes" | "geles" | "colagenos" | "otros";
+  category: "proteinas" | "creatinas" | "pre entrenos" | "barritas" | "granolas" | "pancakes" | "geles" | "colagenos" | "otros";
 }
 
 export const products: Product[] = [
@@ -89,7 +97,7 @@ export const products: Product[] = [
     flavor: "Frutilla",
     price: 50000,
     image: proteinaStarFrutilla,
-    category: "proteina",
+    category: "proteinas",
   },
   {
     id: "whey-star-vainilla",
@@ -99,7 +107,7 @@ export const products: Product[] = [
     flavor: "Vainilla",
     price: 50000,
     image: proteinaStarVainilla,
-    category: "proteina",
+    category: "proteinas",
   },
   {
     id: "whey-star-chocolate",
@@ -109,7 +117,7 @@ export const products: Product[] = [
     flavor: "Chocolate",
     price: 50000,
     image: proteinaStarChocolate,
-    category: "proteina",
+    category: "proteinas",
   },
   {
     id: "whey-star-cookies",
@@ -119,7 +127,7 @@ export const products: Product[] = [
     flavor: "Cookies and Cream",
     price: 50000,
     image: proteinaStarCookies,
-    category: "proteina",
+    category: "proteinas",
   },
   /*{
     id: "whey-star-pote-vainilla",
@@ -129,7 +137,7 @@ export const products: Product[] = [
     flavor: "Vainilla",
     price: 55000,
     image: proteinaStarPoteVainilla,
-    category: "proteina",
+    category: "proteinas",
   },*/
   {
     id: "whey-ena-truemade-vainilla",
@@ -139,7 +147,7 @@ export const products: Product[] = [
     flavor: "Vainilla",
     price: 35000,
     image: proteinaEnaTruemadeVainilla,
-    category: "proteina",
+    category: "proteinas",
   },
   {
     id: "whey-ena-truemade-chocolate",
@@ -149,7 +157,7 @@ export const products: Product[] = [
     flavor: "Chocolate",
     price: 35000,
     image: proteinaEnaTruemadeChocolate,
-    category: "proteina",
+    category: "proteinas",
   },
   {
     id: "whey-ena-truemade2lb-chocolate",
@@ -159,7 +167,7 @@ export const products: Product[] = [
     flavor: "Chocolate",
     price: 60000,
     image: porteinaEnaTruemadeChocolate2,
-    category: "proteina",
+    category: "proteinas",
   },
   {
     id: "whey-ena-truemade2lb-vainilla",
@@ -169,7 +177,7 @@ export const products: Product[] = [
     flavor: "Vainilla",
     price: 60000,
     image: porteinaEnaTruemadeVainilla2,
-    category: "proteina",
+    category: "proteinas",
   },
   {
     id: "whey-ena-100-chocolate",
@@ -179,7 +187,7 @@ export const products: Product[] = [
     flavor: "Chocolate",
     price: 49000,
     image: proteinaEna100Chocolate,
-    category: "proteina",
+    category: "proteinas",
   },
   {
     id: "whey-ena-100-vainilla",
@@ -189,7 +197,7 @@ export const products: Product[] = [
     flavor: "Vainilla",
     price: 49000,
     image: proteinaEna100Vainilla,
-    category: "proteina",
+    category: "proteinas",
   },
   {
     id: "ultramass-ena-chocolate",
@@ -199,7 +207,27 @@ export const products: Product[] = [
     flavor: "Chocolate",
     price: 80000,
     image: ultraMassEnaChocolate,
-    category: "proteina",
+    category: "proteinas",
+  },
+  {
+    id: "ultramass-ena-chocolate15",
+    name: "Ultra Mass Weight Gainer 1.5kg",
+    brand: "ENA",
+    size: "1.5kg",
+    flavor: "Chocolate",
+    price: 46000,
+    image: ultraMassEnaChocolate15,
+    category: "proteinas",
+  },
+  {
+    id: "ultramass-ena-vainilla15",
+    name: "Ultra Mass Weight Gainer 1.5kg",
+    brand: "ENA",
+    size: "1.5kg",
+    flavor: "Vainilla",
+    price: 46000,
+    image: ultraMassEnaVainilla,
+    category: "proteinas",
   },
   {
     id: "whey-body-advance-ddl",
@@ -209,7 +237,7 @@ export const products: Product[] = [
     flavor: "Dulce de leche",
     price: 35000,
     image: proteinaBodyAdvanceDdl,
-    category: "proteina",
+    category: "proteinas",
   },
   {
     id: "whey-body-advance-vainilla",
@@ -219,7 +247,7 @@ export const products: Product[] = [
     flavor: "Vainilla",
     price: 35000,
     image: proteinaBodyAdvanceVll,
-    category: "proteina",
+    category: "proteinas",
   },
   // CREATINAS
   {
@@ -230,7 +258,7 @@ export const products: Product[] = [
     flavor: "Sin sabor",
     price: 28500,
     image: creatinaStar,
-    category: "creatina",
+    category: "creatinas",
   },
   {
     id: "creatina-ena",
@@ -240,7 +268,7 @@ export const products: Product[] = [
     flavor: "Sin sabor",
     price: 29000,
     image: creatinaEna,
-    category: "creatina",
+    category: "creatinas",
   },
   {
     id: "creatina-ena-fruitpunch",
@@ -250,7 +278,7 @@ export const products: Product[] = [
     flavor: "Fruit Punch",
     price: 29000,
     image: creatinaEnaFruitPunch,
-    category: "creatina",
+    category: "creatinas",
   },
   /*{
     id: "creatina-body-advance",
@@ -259,7 +287,7 @@ export const products: Product[] = [
     size: "300gr",
     price: 19200,
     image: creatinaBodyAdvance,
-    category: "creatina",
+    category: "creatinas",
   },*/
   {
     id: "creatina-gentech",
@@ -269,7 +297,7 @@ export const products: Product[] = [
     flavor: "Sin sabor",
     price: 27500,
     image: creatinaGentech,
-    category: "creatina",
+    category: "creatinas",
   },
   // OTROS
   {
@@ -291,16 +319,6 @@ export const products: Product[] = [
     category: "otros"
   },
   {
-    id: "preentreno-ena-fruitpunch",
-    name: "Pre-Entreno FruitPunch",
-    brand: "ENA",
-    size: "300gr",
-    flavor: "Fruit Punch",
-    price: 31000,
-    image: preEntrenoEnaFruitPunch,
-    category: "otros"
-  },
-  {
     id: "shaker-ena",
     name: "Shaker",
     brand: "ENA",
@@ -308,6 +326,67 @@ export const products: Product[] = [
     price: 8000,
     image: shakerEna,
     category: "otros"
+  },
+  // PRE ENTRENOS
+  {
+    id: "preentreno-ena-fruitpunch",
+    name: "Pre-Entreno PreWar Fruit Punch",
+    brand: "ENA",
+    size: "400gr",
+    flavor: "Fruit Punch",
+    price: 31000,
+    image: preEntrenoEnaFruitPunch,
+    category: "pre entrenos"
+  },
+  {
+    id: "preentreno-ena-limon",
+    name: "Pre-Entreno PreWar Lemonade",
+    brand: "ENA",
+    size: "400gr",
+    flavor: "Limon",
+    price: 31000,
+    image: preEntrenoEnaLimon,
+    category: "pre entrenos"
+  },
+  {
+    id: "preentreno-star-acai",
+    name: "Pre-Entreno Pump V8 Açaí Power",
+    brand: "Star Nutrition",
+    size: "285gr",
+    flavor: "Açaí",
+    price: 33000,
+    image: preEntrenoStarAcai,
+    category: "pre entrenos"
+  },
+  {
+    id: "preentreno-star-uva",
+    name: "Pre-Entreno Pump V8 Grape Attack",
+    brand: "Star Nutrition",
+    size: "285gr",
+    flavor: "Uva",
+    price: 33000,
+    image: preEntrenoStarUva,
+    category: "pre entrenos"
+  },
+  {
+    id: "preentreno-star-limon",
+    name: "Pre-Entreno Pump V8 Citrus Slush",
+    brand: "Star Nutrition",
+    size: "285gr",
+    flavor: "Limon",
+    price: 33000,
+    image: preEntrenoStarLimon,
+    category: "pre entrenos"
+  },
+  {
+    id: "preentreno-star-sandia",
+    name: "Pre-Entreno Pump V8 Watermelon",
+    brand: "Star Nutrition",
+    size: "285gr",
+    flavor: "Sandía",
+    price: 33000,
+    image: preEntrenoStarSandia,
+    category: "pre entrenos"
   },
   // COLÁGENOS
   {
