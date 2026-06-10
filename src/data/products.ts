@@ -27,6 +27,8 @@ import barritasGrowsbarFrutillaCaja from "@/assets/products/growsbar-frutilla-ca
 import barritasGrowsbarFrutilla from "@/assets/products/growsbar-frutilla.png";
 import barritasGrowsbarCocoCaja from "@/assets/products/growsbar-coco-caja.png";
 import barritasGrowsbarCoco from "@/assets/products/growsbar-coco.png";
+import barritasGrowsbarCoookiesCaja from "@/assets/products/growsbar-cookies-caja.png";
+import barritasGrowsbarCoookies from "@/assets/products/growsbar-cookies.png";
 import barritasCruddaAvellanaChcolateCaja from "@/assets/products/crudda-avellanachoco-caja.png";
 import barritasCruddaAvellanaChcolate from "@/assets/products/crudda-avellanachoco.png";
 import barritasCruddaArandanosNuezCaja from "@/assets/products/crudda-arandanosnuez-caja.png";
@@ -701,6 +703,26 @@ export const products: Product[] = [
     flavor: "Coco y Chocolate",
     price: 2400,
     image: barritasCruddaCocoChocolate,
+    category: "barritas"
+  },
+  {
+    id: "barritas-growsbar-cookies-caja",
+    name: "Growsbar Barra Proteica Caja",
+    brand: "Growsbar",
+    size: "12 x 46gr",
+    flavor: "Cookies and Cream",
+    price: 24000,
+    image: barritasGrowsbarCoookiesCaja,
+    category: "barritas",
+  },
+  {
+    id: "barritas-growsbar-cookies",
+    name: "Growsbar Barra Proteica",
+    brand: "Growsbar",
+    size: "46gr",
+    flavor: "Cookies and Cream",
+    price: 2300,
+    image: barritasGrowsbarCoookies,
     category: "barritas"
   },
   {
