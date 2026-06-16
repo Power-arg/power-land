@@ -1,6 +1,6 @@
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
-import { ProductsSection } from "@/components/ProductsSection";
+import { ProductsSectionHot } from "@/components/ProductsSectionHot";
 import { FloatingCart } from "@/components/FloatingCart";
 import { Footer } from "@/components/Footer";
 import { CartProvider } from "@/context/CartContext";
@@ -11,7 +11,7 @@ const Index = () => {
       <main className="min-h-screen">
         <HeroSection />
         <AboutSection />
-        <ProductsSection />
+        <ProductsSectionHot />
         <Footer />
         <FloatingCart />
       </main>
