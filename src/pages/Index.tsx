@@ -1,6 +1,8 @@
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
-import { ProductsSectionHot } from "@/components/ProductsSectionHot";
+import { ProductsSectionMundial } from "@/components/ProductsSectionMundial";
+import { ProductsSectionHot } from "@/components/ProductsSectionHotSale";
+import { ProductsSection } from "@/components/ProductsSection";
 import { FloatingCart } from "@/components/FloatingCart";
 import { Footer } from "@/components/Footer";
 import { CartProvider } from "@/context/CartContext";
@@ -11,7 +13,7 @@ const Index = () => {
       <main className="min-h-screen">
         <HeroSection />
         <AboutSection />
-        <ProductsSectionHot />
+        <ProductsSectionMundial />
         <Footer />
         <FloatingCart />
       </main>

@@ -55,7 +55,7 @@ function ArgentinaFlag({ width = 72 }: { width?: number }) {
 }
 
 
-export function ProductsSectionHot() {
+export function ProductsSectionMundial() {
   const [activeCategory, setActiveCategory] = useState<Category>("todos");
 
   const filteredProducts =
@@ -142,13 +142,13 @@ export function ProductsSectionHot() {
           >
             ⚽ ARRANCO EL MUNDIAL ⚽
           </p>
-          <p
+          {/*<p
             className="text-base sm:text-lg max-w-xl"
             style={{ color: "rgba(255,255,255,0.88)" }}
           >
             Celebramos con descuentos especiales en toda la tienda
           </p>
-          <ArgentinaFlag width={80} />
+          <ArgentinaFlag width={80} />*/}
         </div>
       </div>
 
@@ -161,11 +161,11 @@ export function ProductsSectionHot() {
           {/* Encabezado */}
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-3">
-              <span><Flame className="h-12 w-12 text-sky-500" /></span>
+              {/*<span><Flame className="h-12 w-12 text-sky-500" /></span>*/}
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display text-foreground">
-                OFERTAS
+                Nuestros productos
               </h2>
-              <span><Flame className="h-12 w-12 text-sky-500" /></span>
+              {/*<span><Flame className="h-12 w-12 text-sky-500" /></span>*/}
             </div>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
               Seleccioná los productos que quieras y hacé tu pedido por WhatsApp
