@@ -12,6 +12,7 @@ export function ProductCard({ product }: ProductCardProps) {
   const cartItem = items.find((item) => item.product.id === product.id);
   const quantity = cartItem?.quantity || 0;
   const hasDiscount = product.discount && product.originalPrice;
+  const saleColorClass = "text-red-500";
 
   const handleToggle = () => {
     if (inCart) {
@@ -31,7 +32,7 @@ export function ProductCard({ product }: ProductCardProps) {
     >
       {/* Hot Sale Badge */}
       {hasDiscount && (
-        <div className="absolute top-3 left-3 z-10 flex items-center gap-1 text-white px-3 py-1.5 rounded-full font-bold text-sm" style={{ backgroundColor: '#74ACDF' }}>
+        <div className="absolute top-3 left-3 z-10 flex items-center gap-1 bg-red-500 text-white px-3 py-1.5 rounded-full font-bold text-sm shadow-md">
           <Flame className="h-4 w-4" />
           SALE
         </div>
@@ -96,7 +97,7 @@ export function ProductCard({ product }: ProductCardProps) {
                 {formatPrice(product.originalPrice)}
               </span>
             )}
-            <span className={`font-display text-2xl ${hasDiscount ? 'text-[#74ACDF]' : 'text-foreground'}`}>
+            <span className={`font-display text-2xl ${hasDiscount ? saleColorClass : 'text-foreground'}`}>
               {formatPrice(product.price)}
             </span>
           </div>
@@ -122,7 +123,7 @@ export function ProductCard({ product }: ProductCardProps) {
               onClick={handleToggle}
               className={`p-3 rounded-lg transition-all duration-200 ${
                 hasDiscount
-                  ? 'bg-[#74ACDF] text-white hover:bg-[#5DA8D9]'
+                  ? 'bg-red-500 text-white hover:bg-red-600'
                   : 'bg-secondary hover:bg-primary hover:text-primary-foreground'
               }`}
             >

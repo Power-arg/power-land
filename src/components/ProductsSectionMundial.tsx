@@ -18,6 +18,7 @@ type Category =
 
 const CELESTE = "#74ACDF";
 const GOLD = "#F6B40E";
+const OFF_CATEGORIES: Category[] = ["granolas", "pancakes"];
 
 function ArgentinaFlag({ width = 72 }: { width?: number }) {
   const h = Math.round(width * 0.6);
@@ -178,24 +179,34 @@ export function ProductsSectionMundial() {
             </div>
           </div>
 
-          {/* Filtro de categorías */}
           <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
-            {categories.map((cat) => (
-              <button
-                key={cat.key}
-                onClick={() => setActiveCategory(cat.key)}
-                className={`px-3 py-2 text-sm font-display tracking-wide transition-all duration-200 rounded-lg sm:px-6 sm:py-2.5 sm:text-lg ${
-                  activeCategory === cat.key
-                    ? "text-white shadow-md scale-105"
-                    : "bg-card text-foreground hover:bg-primary/10 border border-border"
-                }`}
-                style={
-                  activeCategory === cat.key ? { backgroundColor: CELESTE } : {}
-                }
-              >
-                {cat.label}
-              </button>
-            ))}
+            {categories.map((cat) => {
+              const isOffCategory = OFF_CATEGORIES.includes(cat.key);
+
+              return (
+                <button
+                  key={cat.key}
+                  onClick={() => setActiveCategory(cat.key)}
+                  className={`px-3 py-2 text-sm font-display tracking-wide transition-all duration-200 rounded-lg sm:px-6 sm:py-2.5 sm:text-lg ${activeCategory === cat.key
+                      ? isOffCategory
+                        ? "bg-blue-500 text-white shadow-md shadow-blue-500/25"
+                        : "bg-primary text-primary-foreground"
+                      : isOffCategory
+                        ? "bg-red-50 text-blue-700 border border-red-200 hover:bg-red-100"
+                        : "bg-card text-foreground hover:bg-primary/10 border border-border"
+                    }`}
+                >
+                  <span className="inline-flex items-center gap-2">
+                    {cat.label}
+                    {isOffCategory && (
+                      <span className={`rounded-sm px-2 py-1 text-[10px] font-extrabold tracking-[0.2em] ${activeCategory === cat.key ? "bg-white/20 text-white" : "bg-blue-500 text-white"}`}>
+                        <Flame className="h-4 w-4" />
+                      </span>
+                    )}
+                  </span>
+                </button>
+              );
+            })}
           </div>
 
           {/* Grilla de productos */}
