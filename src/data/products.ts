@@ -46,6 +46,8 @@ import barritasIntegraArandanosCaja from "@/assets/products/integra-caja-arandan
 import barritasIntegraArandanos from "@/assets/products/integra-arandanos.png";
 import barritasIntegraManiCaja from "@/assets/products/integra-caja-mani.png";
 import barritasIntegraMani from "@/assets/products/integra-mani.png";
+import barritasIntegraBananaCaja from "@/assets/products/integra-caja-banana.png";
+import barritasIntegraBanana from "@/assets/products/integra-banana.png";
 
 import pancakesGrangerChocolate from "@/assets/products/pancakes-granger-choco.png";
 import pancakesGrangerVainilla from "@/assets/products/pancakes-granger-vainilla.png";
@@ -602,6 +604,26 @@ export const products: Product[] = [
     flavor: "Pasta de Maní y Arándanos",
     price: 2400,
     image: barritasIntegraArandanos,
+    category: "barritas"
+  },
+  {
+    id: "barritas-integra-banana-caja",
+    name: "Integra Barra Proteica Caja",
+    brand: "Integra",
+    size: "10 x 45gr",
+    flavor: "Banana",
+    price: 22000,
+    image: barritasIntegraBananaCaja,
+    category: "barritas"
+  },
+  {
+    id: "barritas-integra-banana",
+    name: "Integra Barra Proteica",
+    brand: "Integra",
+    size: "45gr",
+    flavor: "Banana",
+    price: 2400,
+    image: barritasIntegraBanana,
     category: "barritas"
   },
   {
