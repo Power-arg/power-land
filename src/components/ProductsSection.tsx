@@ -5,7 +5,7 @@ import { Flame } from "lucide-react";
 
 type Category = "todos" | "proteinas" | "creatinas" | "pre entrenos" | "barritas" | "granolas" | "pancakes" | "geles" | "colagenos" | "otros";
 
-const OFF_CATEGORIES: Category[] = ["granolas", "pancakes"];
+const OFF_CATEGORIES: Category[] = ["granolas"];
 
 export function ProductsSection() {
   const [activeCategory, setActiveCategory] = useState<Category>("todos");

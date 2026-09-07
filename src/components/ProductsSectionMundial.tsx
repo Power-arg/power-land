@@ -18,7 +18,7 @@ type Category =
 
 const CELESTE = "#74ACDF";
 const GOLD = "#F6B40E";
-const OFF_CATEGORIES: Category[] = ["granolas", "pancakes"];
+const OFF_CATEGORIES: Category[] = ["granolas"];
 
 function ArgentinaFlag({ width = 72 }: { width?: number }) {
   const h = Math.round(width * 0.6);

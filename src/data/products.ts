@@ -522,9 +522,7 @@ export const products: Product[] = [
     brand: "Granger",
     size: "400gr",
     flavor: "Vainilla",
-    price: 15500,
-    originalPrice: 16500,
-    discount: 15500,
+    price: 16500,
     image: pancakesGrangerVainilla,
     category: "pancakes"
   },
@@ -534,9 +532,7 @@ export const products: Product[] = [
     brand: "Granger",
     size: "400gr",
     flavor: "Chocolate",
-    price: 15500,
-    originalPrice: 16500,
-    discount: 15500,
+    price: 16500,
     image: pancakesGrangerChocolate,
     category: "pancakes"
   },
