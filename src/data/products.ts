@@ -86,6 +86,7 @@ export interface Product {
   size: string;
   flavor?: string;
   price: number;
+  priceOnRequest?: boolean;
   originalPrice?: number;
   discount?: number;
   image: string;
@@ -100,7 +101,7 @@ export const products: Product[] = [
     brand: "Star Nutrition",
     size: "910gr",
     flavor: "Frutilla",
-    price: 58000,
+    price: 75000,
     image: proteinaStarFrutilla,
     category: "proteinas",
   },
@@ -110,7 +111,7 @@ export const products: Product[] = [
     brand: "Star Nutrition",
     size: "910gr",
     flavor: "Vainilla",
-    price: 58000,
+    price: 75000,
     image: proteinaStarVainilla,
     category: "proteinas",
   },
@@ -120,7 +121,7 @@ export const products: Product[] = [
     brand: "Star Nutrition",
     size: "910gr",
     flavor: "Chocolate",
-    price: 58000,
+    price: 75000,
     image: proteinaStarChocolate,
     category: "proteinas",
   },
@@ -130,7 +131,7 @@ export const products: Product[] = [
     brand: "Star Nutrition",
     size: "910gr",
     flavor: "Cookies and Cream",
-    price: 58000,
+    price: 75000,
     image: proteinaStarCookies,
     category: "proteinas",
   },
@@ -150,7 +151,7 @@ export const products: Product[] = [
     brand: "ENA",
     size: "910gr",
     flavor: "Chocolate",
-    price: 71000,
+    price: 80000,
     image: porteinaEnaTruemadeChocolate2,
     category: "proteinas",
   },
@@ -160,7 +161,7 @@ export const products: Product[] = [
     brand: "ENA",
     size: "910gr",
     flavor: "Vainilla",
-    price: 71000,
+    price: 80000,
     image: porteinaEnaTruemadeVainilla2,
     category: "proteinas",
   },
@@ -170,7 +171,7 @@ export const products: Product[] = [
     brand: "ENA",
     size: "910gr",
     flavor: "Chocolate",
-    price: 57000,
+    price: 62000,
     image: proteinaEna100Chocolate,
     category: "proteinas",
   },
@@ -180,7 +181,7 @@ export const products: Product[] = [
     brand: "ENA",
     size: "910gr",
     flavor: "Vainilla",
-    price: 57000,
+    price: 62000,
     image: proteinaEna100Vainilla,
     category: "proteinas",
   },
@@ -191,6 +192,7 @@ export const products: Product[] = [
     size: "3kg",
     flavor: "Chocolate",
     price: 85000,
+    priceOnRequest: true,
     image: ultraMassEnaChocolate,
     category: "proteinas",
   },
@@ -201,6 +203,7 @@ export const products: Product[] = [
     size: "3kg",
     flavor: "Vainilla",
     price: 85000,
+    priceOnRequest: true,
     image: ultraMassEnaVainilla,
     category: "proteinas",
   },
@@ -211,6 +214,7 @@ export const products: Product[] = [
     size: "1.5kg",
     flavor: "Chocolate",
     price: 50000,
+    priceOnRequest: true,
     image: ultraMassEnaChocolate15,
     category: "proteinas",
   },
@@ -221,6 +225,7 @@ export const products: Product[] = [
     size: "1.5kg",
     flavor: "Vainilla",
     price: 50000,
+    priceOnRequest: true,
     image: ultraMassEnaVainilla15,
     category: "proteinas",
   },
@@ -231,6 +236,7 @@ export const products: Product[] = [
     size: "455gr",
     flavor: "Vainilla",
     price: 42000,
+    priceOnRequest: true,
     image: proteinaEnaTruemadeVainilla,
     category: "proteinas",
   },
@@ -241,6 +247,7 @@ export const products: Product[] = [
     size: "455gr",
     flavor: "Chocolate",
     price: 42000,
+    priceOnRequest: true,
     image: proteinaEnaTruemadeChocolate,
     category: "proteinas",
   },
@@ -251,6 +258,7 @@ export const products: Product[] = [
     size: "910gr",
     flavor: "Dulce de leche",
     price: 37000,
+    priceOnRequest: true,
     image: proteinaBodyAdvanceDdl,
     category: "proteinas",
   },
@@ -261,6 +269,7 @@ export const products: Product[] = [
     size: "910gr",
     flavor: "Vainilla",
     price: 37000,
+    priceOnRequest: true,
     image: proteinaBodyAdvanceVll,
     category: "proteinas",
   },
@@ -330,6 +339,7 @@ export const products: Product[] = [
     brand: "Star Nutrition",
     size: "60 Caps",
     price: 32000,
+    priceOnRequest: true,
     image: omega3Star,
     category: "otros"
   },
@@ -338,7 +348,7 @@ export const products: Product[] = [
     name: "Shaker",
     brand: "ENA",
     size: "500ml",
-    price: 10000,
+    price: 12000,
     image: shakerEna,
     category: "otros"
   },
@@ -350,6 +360,7 @@ export const products: Product[] = [
     size: "400gr",
     flavor: "Fruit Punch",
     price: 32000,
+    priceOnRequest: true,
     image: preEntrenoEnaFruitPunch,
     category: "pre entrenos"
   },
@@ -360,6 +371,7 @@ export const products: Product[] = [
     size: "400gr",
     flavor: "Limon",
     price: 32000,
+    priceOnRequest: true,
     image: preEntrenoEnaLimon,
     category: "pre entrenos"
   },
@@ -370,6 +382,7 @@ export const products: Product[] = [
     size: "285gr",
     flavor: "Açaí",
     price: 33000,
+    priceOnRequest: true,
     image: preEntrenoStarAcai,
     category: "pre entrenos"
   },
@@ -380,6 +393,7 @@ export const products: Product[] = [
     size: "285gr",
     flavor: "Uva",
     price: 33000,
+    priceOnRequest: true,
     image: preEntrenoStarUva,
     category: "pre entrenos"
   },
@@ -390,6 +404,7 @@ export const products: Product[] = [
     size: "285gr",
     flavor: "Limon",
     price: 33000,
+    priceOnRequest: true,
     image: preEntrenoStarLimon,
     category: "pre entrenos"
   },
@@ -400,6 +415,7 @@ export const products: Product[] = [
     size: "285gr",
     flavor: "Sandía",
     price: 33000,
+    priceOnRequest: true,
     image: preEntrenoStarSandia,
     category: "pre entrenos"
   },
@@ -410,7 +426,7 @@ export const products: Product[] = [
     brand: "Star Nutrition",
     size: "210gr",
     flavor: "Limón",
-    price: 24000,
+    price: 25000,
     image: colagenStarLimon,
     category: "colagenos"
   },
@@ -420,7 +436,7 @@ export const products: Product[] = [
     brand: "Star Nutrition",
     size: "210gr",
     flavor: "Frutos Rojos",
-    price: 24000,
+    price: 25000,
     image: colagenStarFrutosRojos,
     category: "colagenos"
   },
@@ -431,6 +447,7 @@ export const products: Product[] = [
     size: "240gr",
     flavor: "Naranja",
     price: 21000,
+    priceOnRequest: true,
     image: colagenoOneFitNaranja,
     category: "colagenos"
   },
@@ -442,6 +459,7 @@ export const products: Product[] = [
     size: "42gr",
     flavor: "Naranja con cafeína",
     price: 2400,
+    priceOnRequest: true,
     image: gelNaranja,
     category: "geles"
   },
@@ -452,6 +470,7 @@ export const products: Product[] = [
     size: "12 x 42gr",
     flavor: "Naranja con cafeína",
     price: 25000,
+    priceOnRequest: true,
     image: gelesNaranja,
     category: "geles"
   },
@@ -462,6 +481,7 @@ export const products: Product[] = [
     size: "42gr",
     flavor: "Triberry con cafeína",
     price: 2400,
+    priceOnRequest: true,
     image: gelTriberry,
     category: "geles"
   },
@@ -472,6 +492,7 @@ export const products: Product[] = [
     size: "12 x 42gr",
     flavor: "Triberry con cafeína",
     price: 25000,
+    priceOnRequest: true,
     image: gelesTriberry,
     category: "geles"
   },
@@ -482,6 +503,7 @@ export const products: Product[] = [
     size: "42gr",
     flavor: "Sin sabor sin cafeína",
     price: 2400,
+    priceOnRequest: true,
     image: gelNeutro,
     category: "geles"
   },
@@ -492,6 +514,7 @@ export const products: Product[] = [
     size: "12 x 42gr",
     flavor: "Sin sabor sin cafeína",
     price: 25000,
+    priceOnRequest: true,
     image: gelesNeutro,
     category: "geles"
   },
@@ -502,6 +525,7 @@ export const products: Product[] = [
     size: "42gr",
     flavor: "Chocolate con cafeína",
     price: 2500,
+    priceOnRequest: true,
     image: gelChocoEndurance,
     category: "geles"
   },
@@ -512,6 +536,7 @@ export const products: Product[] = [
     size: "12 x 42gr",
     flavor: "Chocolate con cafeína",
     price: 28000,
+    priceOnRequest: true,
     image: gelesChocoEndurance,
     category: "geles"
   },
@@ -543,9 +568,7 @@ export const products: Product[] = [
     brand: "Integra",
     size: "250gr",
     flavor: "Pasta de Mani",
-    price: 9000,
-    originalPrice: 10000,
-    discount: 9000,
+    price: 11000,
     image: granolaPastamani,
     category: "granolas"
   },
@@ -556,7 +579,7 @@ export const products: Product[] = [
     size: "250gr",
     flavor: "Banana y Chocolate",
     price: 9000,
-    originalPrice: 10000,
+    originalPrice: 11000,
     discount: 9000,
     image: granolaBanana,
     category: "granolas"

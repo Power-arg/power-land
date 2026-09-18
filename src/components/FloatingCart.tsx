@@ -11,12 +11,14 @@ export function FloatingCart() {
     updateQuantity,
     clearCart,
     getTotal,
+    hasItemsWithPriceOnRequest,
     getItemCount,
     generateWhatsAppMessage,
   } = useCart();
 
   const itemCount = getItemCount();
   const total = getTotal();
+  const hasPendingPrices = hasItemsWithPriceOnRequest();
 
   const handleWhatsAppOrder = () => {
     const message = generateWhatsAppMessage();
@@ -104,7 +106,9 @@ export function FloatingCart() {
                         </p>
                       )}
                       <p className="font-display text-lg text-foreground mt-1">
-                        {formatPrice(item.product.price)}
+                        {item.product.priceOnRequest
+                          ? "Precio a consultar"
+                          : formatPrice(item.product.price)}
                       </p>
                       
                       <div className="flex items-center gap-2 mt-2">
@@ -142,11 +146,19 @@ export function FloatingCart() {
               {/* Footer */}
               <div className="p-6 border-t border-border space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-muted-foreground">Total</span>
+                  <span className="text-muted-foreground">
+                    {hasPendingPrices ? "Total parcial" : "Total"}
+                  </span>
                   <span className="font-display text-3xl text-foreground">
                     {formatPrice(total)}
                   </span>
                 </div>
+
+                {hasPendingPrices && (
+                  <p className="text-sm text-amber-700 bg-amber-50 border border-amber-200 rounded-lg p-3">
+                    Faltan consultar los precios de uno o más productos.
+                  </p>
+                )}
 
                 <button
                   onClick={handleWhatsAppOrder}

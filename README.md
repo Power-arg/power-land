@@ -63,7 +63,11 @@ npm install
 ```bash
 # Desarrollo
 npm run dev
-## Inicia el servidor de desarrollo en `http://localhost:5173`. Los cambios se reflejan automáticamente.
+## Inicia el servidor de desarrollo en `http://localhost:8080`. Los cambios se reflejan automáticamente.
+
+# Tunel público con ngrok
+npm run ngrok
+## Expone el servidor local de Vite en una URL pública de ngrok. Ejecutalo en otra terminal mientras `npm run dev` está activo.
 
 # Construccion
 npm run build

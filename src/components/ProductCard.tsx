@@ -1,6 +1,6 @@
-import { Plus, Minus, Check, Flame } from "lucide-react";
+import { Plus, Minus, Check, Flame, MessageCircle } from "lucide-react";
 import { Product, formatPrice } from "@/data/products";
-import { useCart } from "@/context/CartContext";
+import { useCart, WHATSAPP_NUMBER } from "@/context/CartContext";
 
 interface ProductCardProps {
   product: Product;
@@ -13,6 +13,12 @@ export function ProductCard({ product }: ProductCardProps) {
   const quantity = cartItem?.quantity || 0;
   const hasDiscount = product.discount && product.originalPrice;
   const saleColorClass = "text-red-500";
+
+  const handlePriceRequest = () => {
+    const flavorText = product.flavor ? `, sabor ${product.flavor}` : "";
+    const message = `Hola, quisiera consultar la disponibilidad y el precio del producto ${product.name}, marca ${product.brand}, ${product.size}${flavorText}. Muchas gracias.`;
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank");
+  };
 
   const handleToggle = () => {
     if (inCart) {
@@ -98,7 +104,7 @@ export function ProductCard({ product }: ProductCardProps) {
               </span>
             )}
             <span className={`font-display text-2xl ${hasDiscount ? saleColorClass : 'text-foreground'}`}>
-              {formatPrice(product.price)}
+              {!product.priceOnRequest && formatPrice(product.price)}
             </span>
           </div>
 
@@ -116,6 +122,23 @@ export function ProductCard({ product }: ProductCardProps) {
                 className="p-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-colors"
               >
                 <Plus className="h-4 w-4" />
+              </button>
+            </div>
+          ) : product.priceOnRequest ? (
+            <div className="flex items-center gap-2">
+              <button
+                onClick={handlePriceRequest}
+                className="flex items-center gap-2 px-3 py-2 bg-secondary text-foreground border border-black hover:bg-secondary/80 rounded-lg transition-colors text-sm font-semibold"
+              >
+                <MessageCircle className="h-4 w-4" />
+                Consultar
+              </button>
+              <button
+                onClick={handleToggle}
+                aria-label={`Agregar ${product.name} al carrito`}
+                className="p-3 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-200"
+              >
+                <Plus className="h-5 w-5" />
               </button>
             </div>
           ) : (

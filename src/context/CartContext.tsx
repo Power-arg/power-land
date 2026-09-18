@@ -13,6 +13,7 @@ interface CartContextType {
   updateQuantity: (productId: string, quantity: number) => void;
   clearCart: () => void;
   getTotal: () => number;
+  hasItemsWithPriceOnRequest: () => boolean;
   getItemCount: () => number;
   isInCart: (productId: string) => boolean;
   generateWhatsAppMessage: () => string;
@@ -61,9 +62,16 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   const getTotal = useCallback(() => {
     return items.reduce(
-      (total, item) => total + item.product.price * item.quantity,
+      (total, item) =>
+        item.product.priceOnRequest
+          ? total
+          : total + item.product.price * item.quantity,
       0
     );
+  }, [items]);
+
+  const hasItemsWithPriceOnRequest = useCallback(() => {
+    return items.some((item) => item.product.priceOnRequest);
   }, [items]);
 
   const getItemCount = useCallback(() => {
@@ -83,16 +91,22 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     const productList = items
       .map((item) => {
         const flavorText = item.product.flavor ? ` - ${item.product.flavor}` : "";
-        return `• ${item.product.name} (${item.product.brand}${flavorText}) x${item.quantity} - ${formatPrice(item.product.price * item.quantity)}`;
+        const priceText = item.product.priceOnRequest
+          ? "precio a consultar"
+          : formatPrice(item.product.price * item.quantity);
+        return `• ${item.product.name} (${item.product.brand}${flavorText}) x${item.quantity} - ${priceText}`;
       })
       .join("\n");
 
     const total = formatPrice(getTotal());
 
-    const message = `¡Hola! Quiero hacer un pedido:\n\n${productList}\n\n*Total: ${total}*\n\n¡Gracias!`;
+    const pendingPriceNote = hasItemsWithPriceOnRequest()
+      ? "\n\nNota: algunos productos tienen el precio pendiente de confirmar."
+      : "";
+    const message = `Hola, quisiera realizar el siguiente pedido:\n\n${productList}\n\n*Total parcial: ${total}*${pendingPriceNote}\n\nMuchas gracias.`;
 
     return encodeURIComponent(message);
-  }, [items, getTotal]);
+  }, [items, getTotal, hasItemsWithPriceOnRequest]);
 
   return (
     <CartContext.Provider
@@ -103,6 +117,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         updateQuantity,
         clearCart,
         getTotal,
+        hasItemsWithPriceOnRequest,
         getItemCount,
         isInCart,
         generateWhatsAppMessage,
